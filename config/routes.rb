@@ -3,5 +3,5 @@ Rails.application.routes.draw do
     root "movies#index"
     get "movies"        => "movies#index"
     get "movies/:id"    => "movies#show", as: "movie"
-    get "events/:id/edit" => "events#edit", as: "edit_event"
+    get "movie/:id/edit" => "movies#edit", as: "edit_movie"
 end

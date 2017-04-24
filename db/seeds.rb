@@ -35,3 +35,12 @@ Movie.create!([
         released_on: "2004-07-23"
     }
 ])
+
+
+movie = Movie.find_by(title: 'Iron Man')
+movie.reviews.create!(email: "Roger Ebert", rating: 3, date:"2015-04-06", comment: "I laughed, I cried, I spilled my popcorn!")
+movie.reviews.create!(email: "Gene Siskel", rating: 5, date: "2014-03-01", comment: "I'm a better reviewer than he is.")
+movie.reviews.create!(email: "Peter Travers", rating: 4, date: "2013-03-01", comment: "It's been years since a movie superhero was this fierce and this funny.")
+
+movie = Movie.find_by(title: 'Superman')
+movie.reviews.create!(email: "Elvis Mitchell", rating: 5, date: "2013-04-09", comment: "It's a bird, it's a plane, it's a blockbuster!")

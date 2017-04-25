@@ -7,18 +7,18 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Movie.create!([
     {
+        title: "Thor",
+        rating: "PG-13",
+        total_gross: 133245234.44,
+        description: "Against his father Odin's will, The Mighty Thor -a powerful but orrogant worrior god -recklessly reignites an ancient war. Thor is cast down to Earth and forced to live among humans as punishment. Once here, Thor learns what it takes to be a true hero when the most dangerous villain of his world sends the darkest forces of Asgard to invade Earth.",
+        released_on: "2011-04-21"
+    },
+    {
         title: "Iron Man",
         rating: "PG-13",
         total_gross: 318412101.00,
         description: "Tony Stark builds an armored suit to fight the throes of evil",
         released_on: "2008-05-02"
-    },
-    {
-        title: "Superman",
-        rating: "PG",
-        total_gross: 134218018.00,
-        description: "Clark Kent grows up to be the greatest super-hero",
-        released_on: "1978-12-15"
     },
     {
         title: "Spider-Man",
@@ -28,19 +28,26 @@ Movie.create!([
         released_on: "2002-05-03"
     },
     {
-        title: "Catwoman",
+        title: "Captain America ",
+        rating: "PG",
+        total_gross: 134218018.00,
+        description: "During Word War II, a brave, patriotic American Soldier undergoes experiments to become a new supersoldier, 'Captain America.' Racing to Germany to sabotage the rockets of Nazy baddie 'Red Skull', Captain America winds up frozen ultil the 1990s. he reawakens to find that the Red Skull has changed identities and is now planning to kidnap the President of the United States.",
+        released_on: "1990-12-14"
+    },
+    {
+        title: "The Terminator",
         rating: "PG-13",
-        total_gross: 40200000.00,
-        description: "Patience Philips has a more than respectable career as a graphic designer",
-        released_on: "2004-07-23"
+        total_gross: 135765034.00,
+        description: "In the post-apocalyptic future, reigning tyrannical supercomputers teleport a cyborg assassing known as the 'Terminator' back to 1984 to kill Sarah Connor, whose unborn son is destined to lead insurgents against 21st century mechanical hegemony. Meanwhile, the human-resistance movement dispatches a lone warrior to safegard Sarah. Can he stop the virtually indestructible killing machine?",
+        released_on: "1984-10-26"
     }
 ])
 
 
 movie = Movie.find_by(title: 'Iron Man')
-movie.reviews.create!(email: "Roger Ebert", rating: 3, date:"2015-04-06", comment: "I laughed, I cried, I spilled my popcorn!")
-movie.reviews.create!(email: "Gene Siskel", rating: 5, date: "2014-03-01", comment: "I'm a better reviewer than he is.")
-movie.reviews.create!(email: "Peter Travers", rating: 4, date: "2013-03-01", comment: "It's been years since a movie superhero was this fierce and this funny.")
+movie.reviews.create!(email: "fermin1@gmail.com", rating: 3, date:"2015-04-06", comment: "testing with  popcorn!")
+movie.reviews.create!(email: "fermin2@gmail.com", rating: 5, date: "2014-03-01", comment: "orem ipsum dolor sit amet, pharetra ac. Vulputate vestibulum. Nullam libero eu mauris, sodales elit sed ad maecenas leo metus, purus lorem, odio mauris risus duis lectus molestie. Nisl hendrerit, du")
+movie.reviews.create!(email: "Mario@gmail.com", rating: 4, date: "2013-03-01", comment: "Aliquam tristique elementum tellus eleifend et, in vestibulum, dapibus per tincidunt arcu gravida. Consequun superhero was this fierce and this funny.")
 
 movie = Movie.find_by(title: 'Superman')
-movie.reviews.create!(email: "Elvis Mitchell", rating: 5, date: "2013-04-09", comment: "It's a bird, it's a plane, it's a blockbuster!")
+movie.reviews.create!(email: "Elvis@gmail.com", rating: 5, date: "2013-04-09", comment: "e mi accumsan ipsum. Et suspendisse, wisi eget vel, curabitur accumsan. Turpis wisi lobortis scelerisque arcu rutrum neque, fringilla mauris amet. Vestibulum semper. Consequat enim a blockbuster!")

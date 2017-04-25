@@ -52,13 +52,13 @@
                 console.log(data);
                 gloval = data;
                 var str = "";
-                for (var i = 0; i < data.results.length; i++ )
+                for (var i = 1; i <= data.results.length; i++ )
                 {
                     str +="<li><br/>"+
                         "<div class='movie'>"+
                             "<header>"+
                                 "<img src='https://image.tmdb.org/t/p/w185_and_h278_bestv2/"+data.results[i].poster_path+"' alt='Placeholder'/>"+
-                                "<h2></h2><h2><a href='/movies/1'>"+data.results[i].original_title+"</a> <br/><br/>Released: " +data.results[i].release_date+"</h2>"+
+                                "<h2></h2><h2><a href='/movies/"+i+"'>"+data.results[i].original_title+"</a> <br/><br/>Released: " +data.results[i].release_date+"</h2>"+
 
                             "</header>"+
                             "<p>"+data.results[i].overview+"</p>"+

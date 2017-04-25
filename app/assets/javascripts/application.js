@@ -50,30 +50,26 @@
                   "37": "Western"
             };
                 console.log(data);
-                console.log('test');
                 gloval = data;
                 var str = "";
                 for (var i = 0; i < data.results.length; i++ )
                 {
-                    var movie = i+1;
                     str +="<li><br/>"+
                         "<div class='movie'>"+
                             "<header>"+
                                 "<img src='https://image.tmdb.org/t/p/w185_and_h278_bestv2/"+data.results[i].poster_path+"' alt='Placeholder'/>"+
                                 "<h2>"+data.results[i].original_title+"<br/><br/>Released: " +data.results[i].release_date+"</h2>"+
-
                             "</header>"+
                             "<p>"+data.results[i].overview+"</p>"+
                             "<table>"+
                                 "<tbody><tr>"+
                                     "<td>Genre: "+g[data.results[i].genre_ids[0]]+", "+g[data.results[i].genre_ids[1]]+"</td>"+
                                 "</tr>"+
-                                    // "<th>Total Gross</th>"+
-                                    // "<td>$318,412,101.00</td>"+
                                 "</tr>"+
-                            "</tbody></table>"
+                            "</tbody></table>"+
                         "</div>"+
                     "</li><hr>";
+                }
                 
                 $('#movies.moviedbs').html(str);
                 console.log(str);

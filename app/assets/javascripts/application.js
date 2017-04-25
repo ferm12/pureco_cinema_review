@@ -59,7 +59,7 @@
                         "<div class='movie'>"+
                             "<header>"+
                                 "<img src='https://image.tmdb.org/t/p/w185_and_h278_bestv2/"+data.results[i].poster_path+"' alt='Placeholder'/>"+
-                                "<h2></h2><h2><a href='/movies/"+movie+"'>"+data.results[i].original_title+"</a> <br/><br/>Released: " +data.results[i].release_date+"</h2>"+
+                                "<h2>"+data.results[i].original_title+"<br/><br/>Released: " +data.results[i].release_date+"</h2>"+
 
                             "</header>"+
                             "<p>"+data.results[i].overview+"</p>"+
@@ -73,7 +73,7 @@
                             "</tbody></table>"
                         "</div>"+
                     "</li><hr>";
-                }
+                
                 $('#movies.moviedbs').html(str);
                 console.log(str);
             },

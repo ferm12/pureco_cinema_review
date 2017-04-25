@@ -50,6 +50,7 @@
                   "37": "Western"
             };
                 console.log(data);
+                console.log('test');
                 gloval = data;
                 var str = "";
                 for (var i = 0; i < data.results.length; i++ )

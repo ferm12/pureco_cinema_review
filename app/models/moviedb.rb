@@ -1,0 +1,2 @@
+class Moviedb < ApplicationRecord
+end

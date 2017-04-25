@@ -60,7 +60,9 @@ ul#movies {
   list-style: none;
   margin: 0;
   padding: 0;
-  article.movie {
+  li{
+    padding:90px 0px 0px 0px;
+    article.movie {
     margin-bottom: 1.5em;
     padding-bottom: 1.5em;
     border-bottom: 1px dotted $subdued-color;
@@ -118,6 +120,8 @@ ul#movies {
       text-align: center;
       margin-top: 1em;
     }
+
+  }
   }
 }
 

@@ -1,36 +1,36 @@
+<%# <%= link_to 'All Movies', moviedbs_path, class: 'button' %>
+<span class="all-movies" style="background:url();padding: 4px 0;
+    padding-left: 25px;"><a class="button right" href="/">Moviedb</a></span>
 <h1><%= pluralize(@movies.size, 'Movie') %></h1>
 
-<%# <%= link_to "Add New Movie", new_movie_path %>
-
-
 <ul id="movies">
-  <% @movies.each do |movie| %>
-    <li>
-      <article class="movie">
-        <header>
-          <%= image_for(movie) %>
-          <h2><%= link_to movie.title, movie %> (<%= movie.released_on.year %>)</h2>
-        </header>
-        <p>
-          <%= truncate(movie.description, length: 150, separator: ' ') %>
-        </p>
-        <table>
-          <tr>
-            <th>Rating</th>
-            <td><%= movie.rating %></td>
-          </tr>
-          <tr>
-            <!-- <th>Duration</th> -->
-          </tr>
-          <tr>
-            <th>Total Gross</th>
-            <td><%= format_total_gross(movie) %></td>
-          </tr>
-        </table>
-        <footer>
-        </footer>
-      </article>
-    </li>
-  <% end %>
+    <% @movies.each do |movie| %>
+        <li>
+            <article class="movie">
+                <header>
+                    <%= image_for(movie) %>
+                    <h2><%= link_to movie.title, movie %> (<%= movie.released_on.year %>)</h2>
+                </header>
+                <p>
+                    <%= truncate(movie.description, length: 150, separator: ' ') %>
+                </p>
+                <table>
+                    <tr>
+                        <th>Rating</th>
+                        <td><%= movie.rating %></td>
+                    </tr>
+                    <tr>
+                        <!-- <th>Duration</th> -->
+                    </tr>
+                    <tr>
+                        <th>Total Gross</th>
+                        <td><%= format_total_gross(movie) %></td>
+                    </tr>
+                </table>
+                <footer>
+                </footer>
+            </article>
+        </li>
+    <% end %>
 </ul>
 

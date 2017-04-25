@@ -49,5 +49,5 @@ movie.reviews.create!(email: "fermin1@gmail.com", rating: 3, date:"2015-04-06", 
 movie.reviews.create!(email: "fermin2@gmail.com", rating: 5, date: "2014-03-01", comment: "orem ipsum dolor sit amet, pharetra ac. Vulputate vestibulum. Nullam libero eu mauris, sodales elit sed ad maecenas leo metus, purus lorem, odio mauris risus duis lectus molestie. Nisl hendrerit, du")
 movie.reviews.create!(email: "Mario@gmail.com", rating: 4, date: "2013-03-01", comment: "Aliquam tristique elementum tellus eleifend et, in vestibulum, dapibus per tincidunt arcu gravida. Consequun superhero was this fierce and this funny.")
 
-movie = Movie.find_by(title: 'Superman')
+movie = Movie.find_by(title: 'Spider-Man')
 movie.reviews.create!(email: "Elvis@gmail.com", rating: 5, date: "2013-04-09", comment: "e mi accumsan ipsum. Et suspendisse, wisi eget vel, curabitur accumsan. Turpis wisi lobortis scelerisque arcu rutrum neque, fringilla mauris amet. Vestibulum semper. Consequat enim a blockbuster!")

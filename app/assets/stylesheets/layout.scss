@@ -2,7 +2,13 @@
 
 body {
   color: $primary-text-color;
-  background-image: url("background.jpg");
+  // background-image: url("background.jpg");
+background: lightgray; /* For browsers that do not support gradients */    
+background: -webkit-linear-gradient(left top, gray, white); /* For Safari 5.1 to 6.0 */
+background: -o-linear-gradient(bottom right, gray, white); /* For Opera 11.1 to 12.0 */
+background: -moz-linear-gradient(bottom right, gray, white); /* For Firefox 3.6 to 15 */
+background: linear-gradient(to bottom right, gray, white); /* Standard syntax (must be last) */
+
   font-family: "Helvetica Neue", Helvetica, Arial;
 }
 
@@ -19,7 +25,7 @@ header#page-header {
     color: #fff;
     text-decoration: none;
     overflow: hidden;
-    backgrund: url("logo.png") no-repeat 0 0;
+    backgrund: url("") no-repeat 0 0;
   }
 
   a.button {
@@ -134,13 +140,13 @@ aside#sidebar {
 
         &.all-movies a {
           display: block;
-          background: url("arrow-right.png") no-repeat 10px 8px;
+          background: image-url("arrow-right.png") no-repeat 10px 8px;
           padding-left: 35px;
         }
 
         &.create-movie a {
           display: block;
-          background: url("add.png") no-repeat 10px 8px;
+          background: image-url("add.png") no-repeat 10px 8px;
           padding-left: 35px;
         }
 

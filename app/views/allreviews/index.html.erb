@@ -1,9 +1,9 @@
-<%# <%= link_to 'All Movies', moviedbs_path, class: 'button' %>
 
+<%# <%= link_to 'All Movies', moviedbs_path, class: 'button' %>
 <span class="all-movies" style="background:url();padding: 4px 0;
     padding-left: 25px;"><a class="button right" href="/">Moviedb</a></span>
-<span class="all-movies" style="background:url();padding: 4px 0;
-    padding-left: 25px;"><a class="button right" href="/allreviews">All Reviews</a></span>
+<h1>All reviews</h1>
+
 <h1><%= pluralize(@movies.size, 'Movie') %></h1>
 
 <ul id="movies">
@@ -30,7 +30,24 @@
                         <td><%= format_total_gross(movie) %></td>
                     </tr>
                 </table>
-                <footer>
+                <footer style="width:80vw">
+                    <h1>Comments</h1>
+                    <ol id="reviews">
+                        <% @reviews.each do |review| %>
+                            <%if review.movie_id == movie.id%>
+                                <li style="text-align:left;padding:0">
+                                    <span class="review">Rating: <%= review.rating %>/5</span>
+                                    <span class="user">by <%= review.email %></span>
+                                    <strong class="revie">Posted</strong>
+                                    <span class="date"><%= review.created_at %> </span>
+                                    <span class="date"><%= time_ago_in_words(review.created_at) %> ago</span>
+                                    <h3>
+                                    &quot;<%= review.comment %>&quot;
+                                    </h3>
+                                </li>
+                            <%end%>
+                        <%end%>
+                    </ol>
                 </footer>
             </article>
         </li>

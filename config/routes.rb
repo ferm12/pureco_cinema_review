@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
     # resources :reviews
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-    get        "/"             => "moviedb#index"
+    # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+    get         "/"             => "moviedb#index"
+    get         "allreviews"    => "allreviews#index"
     # root    "movies#index"
     # get     "movies"            => "movies#index"
     # get     "movies/:id"        => "movies#show", as: "movie"
